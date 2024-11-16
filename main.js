@@ -77,3 +77,26 @@ document.addEventListener('keydown',(event) => {
 	break;
 	}
 })
+
+const MAX_POSITION = 95 // Предельные значения для top и left
+const MIN_POSITION = 5
+
+function moveUp() {
+	if (topPosition > MIN_POSITION) topPosition -= 5
+	updatePosition()
+}
+
+function moveDown() {
+	if (topPosition < MAX_POSITION) topPosition += 5
+	updatePosition()
+}
+
+function moveLeft() {
+	if (leftPosition > MIN_POSITION) leftPosition -= 5
+	updatePosition()
+}
+
+function moveRight() {
+	if (leftPosition < MAX_POSITION) leftPosition += 5
+	updatePosition()
+}
